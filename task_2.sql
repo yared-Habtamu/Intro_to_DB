@@ -24,7 +24,7 @@ CREATE TABLE Orders(
     order_date DATE 
 );
 
-CREATE TABLE order_details(
+CREATE TABLE Order_Details(
    order_detailid PRIMARY KEY,
    FOREIGN KEY order_id REFERENCES ORDERS(order_id),
    FOREIGN KEY book_id REFERENCES Books(book_id),
