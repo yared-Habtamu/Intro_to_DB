@@ -20,13 +20,13 @@ CREATE TABLE customers(
 
 CREATE TABLE Orders(
     order_id INT PRIMARY KEY,
-    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id),
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
     order_date DATE 
 );
 
 CREATE TABLE Order_Details(
    order_detailid PRIMARY KEY,
-   FOREIGN KEY order_id REFERENCES ORDERS(order_id),
+   FOREIGN KEY order_id REFERENCES Orders(order_id),
    FOREIGN KEY book_id REFERENCES Books(book_id),
-   quantity FLOAT
+   quantity DOUBLE
 )
