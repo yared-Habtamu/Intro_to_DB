@@ -6,10 +6,12 @@ CREATE TABLE Books(
     publication_date DATE   
 );
 
+
 CREATE TABLE Authors(
     author_id INT PRIMARY KEY,
     author_name VARCHAR(215)
 );
+
 
 CREATE TABLE Customers(
     customer_id INT PRIMARY KEY,
@@ -29,4 +31,4 @@ CREATE TABLE Order_Details(
    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
    FOREIGN KEY (book_id) REFERENCES Books(book_id)
    quantity DOUBLE
-)
+);
